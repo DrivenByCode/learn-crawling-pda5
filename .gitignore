@@ -1,0 +1,51 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs/
+*.log
+logs/*.log
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# OS generated files
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# dotenv environment variables
+.env
+.env.test
+.env.production
+
+# Optional npm cache directory
+.npm
+
+# Parcel-bundler cache (if using parcel)
+.cache/
+
+# Vercel/Next.js build output (if using Vercel/Next.js)
+.vercel/
+.next/
+
+# Webpack build output
+dist/
+build/
+
+# VSCode specific files
+.vscode/
+.history/
+
+# Temporary files
+*.swp
+*.temp
+*.tmp
+
+# MacOS system files (just in case, if cross-developing)
+.DS_Store
