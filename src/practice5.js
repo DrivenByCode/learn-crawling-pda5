@@ -9,7 +9,7 @@ const headers = {
 
 let options = {
     method: 'GET',
-    url: 'https://finance.naver.com/item/sise.naver?code=005930',
+    url: 'https://finance.naver.com/item/news_notice.naver?code=005930&page=',
     responseType: 'arraybuffer',
     charset: 'euc-kr',
     responseEncodig: 'euc-kr',
@@ -22,19 +22,15 @@ let options = {
 
     const contents = decoder.decode(res.data);
 
-    const $ = cheerio.load(contents);
+    // console.log(contents)
 
-    const parseTable = $('.type2');
+    const $ = cheerio.load(res.data);
 
-    const tableData = [];
+    console.log($.text());
 
-    parseTable.find('tr').each((i, row) => {
-        const prices = $(row).find('.tah.p11');
-        
-        prices.map((idx, ele) => {
-            tableData.push($(ele).text().trim());   
-        })
-    })
+    const $table = $('.type5');
 
-    console.log(tableData);
+    const $rows = $table.find('td.title').find('a.tit');
+
+    console.log($rows.text());
 })()

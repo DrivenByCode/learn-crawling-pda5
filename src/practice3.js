@@ -21,7 +21,7 @@ const obj = [];
         $(ele).attr('href')
     ).get().filter(x => x.trim().length > 0)
 
-    console.log(urls)
+    // console.log(urls)
 
     const arrayLength = urls.length
 
